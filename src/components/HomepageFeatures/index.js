@@ -25,7 +25,7 @@ const FeatureList = [
         práctica para proteger tus cuentas.
       </>
     ),
-    link: '/docs/password-manager',
+    link: '/docs/inspector/intro',
     blocked: true,
   },
   {
@@ -37,7 +37,7 @@ const FeatureList = [
         código abierto que estás utilizando.
       </>
     ),
-    link: '/docs/docusaurus',
+    link: '/docs/inspector/intro',
     blocked: true,
   },
 ];
