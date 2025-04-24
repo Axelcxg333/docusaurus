@@ -1,41 +1,57 @@
-# Website
+# L.A.D
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Bienvenido al repositorio oficial de **L.A.D**.
+Este sitio web fue contruido con [Docusaurus](https://docusaurus.io/) y reúne múltiples recursos prácticos y rápidos para aprender tecnologías web, herramientas de desarrollo y mucho más.
 
-### Installation
+## ✨ ¿Qué puedes encontrar aquí?
+
+Un conjunto creciente de **guías paso a paso**, organizadas en secciones temáticas como:
+
+- 🧪 **Inspector de Elementos**: Aprende a inspeccionar y entender el HTML/CSS de cualquier sitio web.
+- 🚀 **Flujos de trabajo modernos**: Próximamente...
+- ⚙️ **Herramientas de desarrollo web**: Próximamente...
+- 📐 **Buenas prácticas en diseño y accesibilidad**: Próximamente...
+
+Cada guía está diseñada para dar la mayor informacion sobre el tema, con ejemplos claros y explicaciones prácticas.
+
+## 🛠️ Instalación local
+
+### Requisitos
+
+- [Node.js](https://nodejs.org/) 18+
+
+### Clonar e iniciar el proyecto
+
+```bash
+git clone https://github.com/tu-usuario/nombre-del-repo.git
+cd nombre-del-repo
+npm install
+npm run start
+```
+Luego visita (http://localhost:3000) para ver la documentación localmente.
+
+---
+
+## 🧩 Estructura
 
 ```
-$ yarn
+docs/
+  ├── inspector/
+  ├── ...
+sidebars.js
+docusaurus.config.js
+src/
+  └── css/
 ```
 
-### Local Development
+---
 
-```
-$ yarn start
-```
+## 🧠 Contribuciones
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+¿Te gustaría mejorar o añadir un tutorial?  
+Eres bienvenido a contribuir abriendo un issue o haciendo un pull request.
 
-### Build
+---
 
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+> Este proyecto busca facilitar el acceso al conocimiento técnico de forma clara y ordenada.  
+Gracias por formar parte de esta comunidad 🚀
