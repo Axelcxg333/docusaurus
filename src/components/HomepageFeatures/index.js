@@ -1,49 +1,73 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import Link from '@docusaurus/Link';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Inspector de elementos',
+    Svg: require('@site/static/img/features_01.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Aprendé a inspeccionar el HTML y CSS de cualquier página web
+        para analizar su estructura y estilo.
       </>
     ),
+    link: '/docs/inspector/intro',
+    blocked: false,
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Gestor de contraseñas',
+    Svg: require('@site/static/img/features_02.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Descubre cómo usar un gestor de contraseñas de forma segura y
+        práctica para proteger tus cuentas.
       </>
     ),
+    link: '/docs/password-manager',
+    blocked: true,
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Docusaurus',
+    Svg: require('@site/static/img/features_03.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Conocé Docusaurus, la herramienta de documentación moderna de
+        código abierto que estás utilizando.
       </>
     ),
+    link: '/docs/docusaurus',
+    blocked: true,
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description, link, blocked }) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+      <div className={clsx(styles.card, 'shadow--md', 'margin-bottom--lg')}>
+        <div className='text--center'>
+          <Svg className={styles.featureSvg} role="img" />
+        </div>
+        <div className="card__body">
+          <div className="text--center padding-horiz--md">
+            <Heading as="h3">{title}</Heading>
+            <p>{description}</p>
+          </div>
+        </div>
+
+        {blocked && (
+          <div className={styles.blockedOverlay}>
+            <span className={styles.blockedText}>En desarrollo</span>
+          </div>
+          
+        )}
+
+        <div className="card__footer text--center">
+          <Link className="button button--primary button--sm" to={link}>
+            Ver más →
+          </Link>
+        </div>
       </div>
     </div>
   );
